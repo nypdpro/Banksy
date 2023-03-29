@@ -53,8 +53,8 @@ extension LoginView {
         dividerView.translatesAutoresizingMaskIntoConstraints = false
         dividerView.backgroundColor = .systemBackground
         
-//        layer.cornerRadius = 5
-//        clipsToBounds = true
+        layer.cornerRadius = 5
+        clipsToBounds = true
     }
     
     func layout() {
