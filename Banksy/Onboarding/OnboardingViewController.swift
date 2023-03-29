@@ -13,10 +13,28 @@ class OnboardingViewController: UIViewController {
     let label = UILabel()
     let imageView = UIImageView()
     
+    
+    var heroImageName: String
+    var titleText: String
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
         layout()
+    }
+    
+    init(heroImageName: String, titleText: String) {
+        
+        self.heroImageName = heroImageName
+        self.titleText = titleText
+        super.init(nibName: nil, bundle: nil)
+        
+    }
+    
+    
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func style() {
@@ -28,14 +46,14 @@ class OnboardingViewController: UIViewController {
         //image
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(named: "delorean")
+        imageView.image = UIImage(named: heroImageName)
         
         // Label
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.adjustsFontForContentSizeCategory = true
         label.numberOfLines = 0
-        label.text = "2023-03-29 21:30:58.641544+0300 Banksy[51608:959148] [HardwareKeyboard] -[UIApplication getKeyboardDevicePropertiesForSenderID:shouldUpdate:usingSyntheticEvent:], failed to fetch device property for senderID (778835616971358211) use primary keyboard info instead"
+        label.text = titleText
         label.font = UIFont.preferredFont(forTextStyle: .title3)
     }
     func layout() {
@@ -48,7 +66,7 @@ class OnboardingViewController: UIViewController {
             stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             stackView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
             view.trailingAnchor.constraint(equalToSystemSpacingAfter: stackView.trailingAnchor, multiplier: 1)
-        
+            
         ])
         
     }
