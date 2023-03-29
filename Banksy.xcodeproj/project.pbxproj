@@ -14,6 +14,7 @@
 		32633E0A29D37633007359AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32633E0829D37633007359AE /* LaunchScreen.storyboard */; };
 		32633E1429D37B68007359AE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32633E1329D37B68007359AE /* LoginView.swift */; };
 		32633E1729D4B7BA007359AE /* OnboardingContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32633E1629D4B7BA007359AE /* OnboardingContainerVC.swift */; };
+		32633E1929D4BF22007359AE /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32633E1829D4BF22007359AE /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		32633E0B29D37633007359AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32633E1329D37B68007359AE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		32633E1629D4B7BA007359AE /* OnboardingContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerVC.swift; sourceTree = "<group>"; };
+		32633E1829D4BF22007359AE /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				32633E1629D4B7BA007359AE /* OnboardingContainerVC.swift */,
+				32633E1829D4BF22007359AE /* OnboardingViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32633E1729D4B7BA007359AE /* OnboardingContainerVC.swift in Sources */,
+				32633E1929D4BF22007359AE /* OnboardingViewController.swift in Sources */,
 				32633E0229D3762B007359AE /* LoginVC.swift in Sources */,
 				32633DFE29D3762B007359AE /* AppDelegate.swift in Sources */,
 				32633E1429D37B68007359AE /* LoginView.swift in Sources */,
