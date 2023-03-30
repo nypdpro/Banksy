@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         loginVC.delegate = self
         onBVC.delegate = self
  
-        window?.rootViewController = OnboardingContainerViewController()
+        window?.rootViewController = onBVC
         window?.makeKeyAndVisible()
         
     }
@@ -62,8 +62,6 @@ extension SceneDelegate: OnboardingVCDelegate {
     func didFinishOnboarding() {
         print("onboarding is done")
     }
-    
-    
 }
     
 
