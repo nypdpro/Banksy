@@ -13,6 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     let loginVC = LoginVC()
     let onBVC =  OnboardingContainerViewController()
+    let dummyVC = DummyViewController()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
@@ -22,8 +23,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //window?.rootViewController = LoginVC()
         loginVC.delegate = self
         onBVC.delegate = self
+        dummyVC.delegate = self
+        
  
-        window?.rootViewController = onBVC
+        window?.rootViewController = loginVC
         window?.makeKeyAndVisible()
         
     }
@@ -53,15 +56,29 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 extension SceneDelegate: loginViewControllerDelegate {
     func didLogin() {
-        print("did login")
+        setRootViewController(onBVC)
     }
 }
     
 
 extension SceneDelegate: OnboardingVCDelegate {
     func didFinishOnboarding() {
-        print("onboarding is done")
+        setRootViewController(dummyVC)
     }
 }
     
-
+extension SceneDelegate {
+    
+    func setRootViewController(_ vc: UIViewController, animated: Bool = true) {
+        
+        guard animated, let window = self.window else {
+            self.window?.rootViewController = vc
+            self.window?.makeKeyAndVisible()
+            return
+        }
+        window.rootViewController = vc
+        window.makeKeyAndVisible()
+        UIView.transition(with: window, duration: 0.9, options: .transitionCrossDissolve, animations: nil, completion: nil)
+        
+    }
+}

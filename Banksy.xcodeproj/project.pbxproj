@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		321A212829D63AED00F057B8 /* DummyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321A212729D63AED00F057B8 /* DummyVC.swift */; };
 		32633DFE29D3762B007359AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32633DFD29D3762B007359AE /* AppDelegate.swift */; };
 		32633E0029D3762B007359AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32633DFF29D3762B007359AE /* SceneDelegate.swift */; };
 		32633E0229D3762B007359AE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32633E0129D3762B007359AE /* LoginVC.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		321A212729D63AED00F057B8 /* DummyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyVC.swift; sourceTree = "<group>"; };
 		32633DFA29D3762B007359AE /* Banksy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Banksy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32633DFD29D3762B007359AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32633DFF29D3762B007359AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			children = (
 				32633E0129D3762B007359AE /* LoginVC.swift */,
 				32633E1329D37B68007359AE /* LoginView.swift */,
+				321A212729D63AED00F057B8 /* DummyVC.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			files = (
 				32633E1729D4B7BA007359AE /* OnboardingContainerVC.swift in Sources */,
 				32633E1929D4BF22007359AE /* OnboardingViewController.swift in Sources */,
+				321A212829D63AED00F057B8 /* DummyVC.swift in Sources */,
 				32633E0229D3762B007359AE /* LoginVC.swift in Sources */,
 				32633DFE29D3762B007359AE /* AppDelegate.swift in Sources */,
 				32633E1429D37B68007359AE /* LoginView.swift in Sources */,
