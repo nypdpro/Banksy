@@ -79,8 +79,6 @@ extension SceneDelegate: logoutViewControllerDelegate {
     func didLogout() {
         setRootViewController(loginVC)
     }
-    
-    
 }
 
 
