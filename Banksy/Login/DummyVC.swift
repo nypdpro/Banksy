@@ -13,6 +13,7 @@ import UIKit
 class DummyViewController: UIViewController {
     
     weak var delegate: OnboardingVCDelegate?
+    weak var logoutDelegate: logoutViewControllerDelegate?
     
     let stackView = UIStackView()
     let label = UILabel()
@@ -26,6 +27,7 @@ class DummyViewController: UIViewController {
     }
     
     private func style() {
+        view.backgroundColor = .white
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.spacing = 30
@@ -59,7 +61,7 @@ class DummyViewController: UIViewController {
     
     
     @objc func logOut(_ sender: UIButton) {
-        print("logout tapped")
+        logoutDelegate?.didLogout()
     }
 }
 

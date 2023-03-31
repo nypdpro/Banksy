@@ -24,6 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         loginVC.delegate = self
         onBVC.delegate = self
         dummyVC.delegate = self
+        dummyVC.logoutDelegate = self
         
  
         window?.rootViewController = loginVC
@@ -56,16 +57,33 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 extension SceneDelegate: loginViewControllerDelegate {
     func didLogin() {
-        setRootViewController(onBVC)
+        
+        if LocalState.hasOnboarded {
+            setRootViewController(dummyVC)
+        } else {
+            setRootViewController(onBVC)
+        }
+        
     }
 }
     
 
 extension SceneDelegate: OnboardingVCDelegate {
     func didFinishOnboarding() {
+        LocalState.hasOnboarded = true
         setRootViewController(dummyVC)
     }
 }
+
+extension SceneDelegate: logoutViewControllerDelegate {
+    func didLogout() {
+        setRootViewController(loginVC)
+    }
+    
+    
+}
+
+
     
 extension SceneDelegate {
     
@@ -78,7 +96,7 @@ extension SceneDelegate {
         }
         window.rootViewController = vc
         window.makeKeyAndVisible()
-        UIView.transition(with: window, duration: 0.9, options: .transitionCrossDissolve, animations: nil, completion: nil)
+        UIView.transition(with: window, duration: 0.7, options: .transitionCrossDissolve, animations: nil, completion: nil)
         
     }
 }
