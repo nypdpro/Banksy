@@ -131,11 +131,19 @@
 		32E0492E29DAF3F200B01F5B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				32E0492F29DAF40400B01F5B /* AccountSummaryViewController.swift */,
+				32FE62B029DB17DA00F26BE9 /* AccountSummaryViewController */,
 				32E0493129DAF41E00B01F5B /* MoveMoneyViewController.swift */,
 				32E0493329DAF43300B01F5B /* MoreViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		32FE62B029DB17DA00F26BE9 /* AccountSummaryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				32E0492F29DAF40400B01F5B /* AccountSummaryViewController.swift */,
+			);
+			path = AccountSummaryViewController;
 			sourceTree = "<group>";
 		};
 		36E0848629D6F9170090AD02 /* Utils */ = {
