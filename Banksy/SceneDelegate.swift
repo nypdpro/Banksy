@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     let loginVC = LoginVC()
     let onBVC =  OnboardingContainerViewController()
     let dummyVC = DummyViewController()
-    let mainVC = MainViewController()
+    let mainVC = TabbarController()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
@@ -86,7 +86,7 @@ extension SceneDelegate: logoutViewControllerDelegate {
 
     
 extension SceneDelegate {
-    
+    //func to set smooth transsition
     func setRootViewController(_ vc: UIViewController, animated: Bool = true) {
         
         guard animated, let window = self.window else {
