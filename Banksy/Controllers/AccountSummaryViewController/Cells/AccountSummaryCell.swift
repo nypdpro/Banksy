@@ -18,6 +18,8 @@ class AccountSummaryCell: UITableViewCell {
     let balanceLabel = UILabel()
     let balanceAmountLabel = UILabel()
     
+    let chevronImageView = UIImageView()
+    
     
     
     static let reuseID = "Cell"
@@ -35,25 +37,26 @@ class AccountSummaryCell: UITableViewCell {
     
     
     private func setup() {
-
+        
         typeLabel.translatesAutoresizingMaskIntoConstraints = false
         typeLabel.font = UIFont.preferredFont(forTextStyle: .caption1)
         typeLabel.adjustsFontForContentSizeCategory = true
         typeLabel.text = "Account type"
-        contentView.addSubview(typeLabel)
+        
         
         separatorView.translatesAutoresizingMaskIntoConstraints = false
         separatorView.backgroundColor = appColor
-        contentView.addSubview(separatorView)
         
-        
+
         
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.font = UIFont.preferredFont(forTextStyle: .body)
         nameLabel.adjustsFontForContentSizeCategory = true
         nameLabel.text = "Name Label"
-        contentView.addSubview(nameLabel)
         
+        balanceStackView.translatesAutoresizingMaskIntoConstraints = false
+        balanceStackView.axis = .vertical
+        balanceStackView.spacing = 0
         
         balanceLabel.translatesAutoresizingMaskIntoConstraints = false
         balanceLabel.font = UIFont.preferredFont(forTextStyle: .body)
@@ -64,10 +67,21 @@ class AccountSummaryCell: UITableViewCell {
         balanceAmountLabel.textAlignment = .right
         balanceAmountLabel.text = "$450,598.63 "
         
-        balanceStackView.addSubview(balanceLabel)
+        chevronImageView.translatesAutoresizingMaskIntoConstraints = false
+        let chevronImage = UIImage(systemName: "chevron.right")!.withTintColor(appColor, renderingMode: .alwaysOriginal)
+        chevronImageView.image = chevronImage
+        
+        
+        
+        contentView.addSubview(typeLabel)
+        contentView.addSubview(separatorView)
+        contentView.addSubview(nameLabel)
+        
+        balanceStackView.addArrangedSubview(balanceLabel)
         balanceStackView.addArrangedSubview(balanceAmountLabel)
         
         contentView.addSubview(balanceStackView)
+        contentView.addSubview(chevronImageView)
         
         
         
@@ -78,7 +92,7 @@ class AccountSummaryCell: UITableViewCell {
             
             typeLabel.topAnchor.constraint(equalToSystemSpacingBelow: topAnchor, multiplier: 2),
             typeLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 2),
-        
+            
             separatorView.topAnchor.constraint(equalToSystemSpacingBelow: typeLabel.bottomAnchor, multiplier: 1),
             separatorView.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 2),
             separatorView.widthAnchor.constraint(equalToConstant: 80),
@@ -91,6 +105,8 @@ class AccountSummaryCell: UITableViewCell {
             balanceStackView.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 4),
             trailingAnchor.constraint(equalToSystemSpacingAfter: balanceStackView.trailingAnchor, multiplier: 4),
             
+            chevronImageView.topAnchor.constraint(equalToSystemSpacingBelow: separatorView.bottomAnchor, multiplier: 1),
+            trailingAnchor.constraint(equalToSystemSpacingAfter: chevronImageView.trailingAnchor, multiplier: 1)
             
         ])
         
