@@ -20,6 +20,7 @@ class AccountSummaryCell: UITableViewCell {
     struct ViewModel {
         let accountType: AccountType
         let accountName: String
+        let balance: Decimal
     }
     
     let viewModel: ViewModel? = nil
@@ -125,8 +126,6 @@ class AccountSummaryCell: UITableViewCell {
             trailingAnchor.constraint(equalToSystemSpacingAfter: chevronImageView.trailingAnchor, multiplier: 1)
             
         ])
-        
-        
     }
     
     
