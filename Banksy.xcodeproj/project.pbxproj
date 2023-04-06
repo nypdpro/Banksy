@@ -18,6 +18,7 @@
 		32633E1429D37B68007359AE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32633E1329D37B68007359AE /* LoginView.swift */; };
 		32633E1729D4B7BA007359AE /* OnboardingContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32633E1629D4B7BA007359AE /* OnboardingContainerVC.swift */; };
 		32633E1929D4BF22007359AE /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32633E1829D4BF22007359AE /* OnboardingViewController.swift */; };
+		32934FEC29DF703800E7E161 /* BanksyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32934FEB29DF703800E7E161 /* BanksyTests.swift */; };
 		32E0492529DAF32F00B01F5B /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E0492429DAF32F00B01F5B /* TabbarController.swift */; };
 		32E0492729DAF35100B01F5B /* NavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E0492629DAF35100B01F5B /* NavBarController.swift */; };
 		32E0492B29DAF39500B01F5B /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E0492A29DAF39500B01F5B /* Resources.swift */; };
@@ -33,6 +34,16 @@
 		36E0848829D6F92C0090AD02 /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E0848729D6F92C0090AD02 /* LocalState.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		32934FED29DF703800E7E161 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 32633DF229D3762B007359AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 32633DF929D3762B007359AE;
+			remoteInfo = Banksy;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		321A212729D63AED00F057B8 /* DummyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyVC.swift; sourceTree = "<group>"; };
 		3254892A29D8CDBE0050A99C /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
@@ -47,6 +58,8 @@
 		32633E1329D37B68007359AE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		32633E1629D4B7BA007359AE /* OnboardingContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerVC.swift; sourceTree = "<group>"; };
 		32633E1829D4BF22007359AE /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		32934FE929DF703800E7E161 /* BanksyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BanksyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		32934FEB29DF703800E7E161 /* BanksyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksyTests.swift; sourceTree = "<group>"; };
 		32E0492429DAF32F00B01F5B /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		32E0492629DAF35100B01F5B /* NavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarController.swift; sourceTree = "<group>"; };
 		32E0492A29DAF39500B01F5B /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
@@ -70,6 +83,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		32934FE629DF703800E7E161 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				32633DFC29D3762B007359AE /* Banksy */,
+				32934FEA29DF703800E7E161 /* BanksyTests */,
 				32633DFB29D3762B007359AE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				32633DFA29D3762B007359AE /* Banksy.app */,
+				32934FE929DF703800E7E161 /* BanksyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,6 +155,14 @@
 				32633E1829D4BF22007359AE /* OnboardingViewController.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		32934FEA29DF703800E7E161 /* BanksyTests */ = {
+			isa = PBXGroup;
+			children = (
+				32934FEB29DF703800E7E161 /* BanksyTests.swift */,
+			);
+			path = BanksyTests;
 			sourceTree = "<group>";
 		};
 		32E0492E29DAF3F200B01F5B /* Controllers */ = {
@@ -205,6 +235,24 @@
 			productReference = 32633DFA29D3762B007359AE /* Banksy.app */;
 			productType = "com.apple.product-type.application";
 		};
+		32934FE829DF703800E7E161 /* BanksyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32934FF129DF703800E7E161 /* Build configuration list for PBXNativeTarget "BanksyTests" */;
+			buildPhases = (
+				32934FE529DF703800E7E161 /* Sources */,
+				32934FE629DF703800E7E161 /* Frameworks */,
+				32934FE729DF703800E7E161 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				32934FEE29DF703800E7E161 /* PBXTargetDependency */,
+			);
+			name = BanksyTests;
+			productName = BanksyTests;
+			productReference = 32934FE929DF703800E7E161 /* BanksyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -217,6 +265,10 @@
 				TargetAttributes = {
 					32633DF929D3762B007359AE = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					32934FE829DF703800E7E161 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 32633DF929D3762B007359AE;
 					};
 				};
 			};
@@ -234,6 +286,7 @@
 			projectRoot = "";
 			targets = (
 				32633DF929D3762B007359AE /* Banksy */,
+				32934FE829DF703800E7E161 /* BanksyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -246,6 +299,13 @@
 				32633E0A29D37633007359AE /* LaunchScreen.storyboard in Resources */,
 				32633E0729D37633007359AE /* Assets.xcassets in Resources */,
 				32FE62BA29DB3A4B00F26BE9 /* SummaryHeaderView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32934FE729DF703800E7E161 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +340,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		32934FE529DF703800E7E161 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32934FEC29DF703800E7E161 /* BanksyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		32934FEE29DF703800E7E161 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 32633DF929D3762B007359AE /* Banksy */;
+			targetProxy = 32934FED29DF703800E7E161 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		32633E0829D37633007359AE /* LaunchScreen.storyboard */ = {
@@ -462,6 +538,42 @@
 			};
 			name = Release;
 		};
+		32934FEF29DF703800E7E161 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G2SQ4V58LL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = notHome.BanksyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Banksy.app/Banksy";
+			};
+			name = Debug;
+		};
+		32934FF029DF703800E7E161 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G2SQ4V58LL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = notHome.BanksyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Banksy.app/Banksy";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -479,6 +591,15 @@
 			buildConfigurations = (
 				32633E0F29D37633007359AE /* Debug */,
 				32633E1029D37633007359AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32934FF129DF703800E7E161 /* Build configuration list for PBXNativeTarget "BanksyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32934FEF29DF703800E7E161 /* Debug */,
+				32934FF029DF703800E7E161 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
