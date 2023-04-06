@@ -25,18 +25,18 @@ enum Resources {
     enum String {
         
         enum TabBar {
-            static var overview = "Summary"
-            static var session = "Move Money"
-            static var progress = "More"
+            static var summary = "Summary"
+            static var moveMoney = "Move Money"
+            static var more = "More"
           
         }
     }
     
     enum Images {
         enum TabBar {
-        static var overview = UIImage(systemName: "list.dash.header.rectangle")
-        static var session  = UIImage(systemName: "arrow.left.arrow.right")
-        static var progress = UIImage(systemName: "ellipsis.circle")
+        static var summary = UIImage(systemName: "list.dash.header.rectangle")
+        static var moveMoney  = UIImage(systemName: "arrow.left.arrow.right")
+        static var more = UIImage(systemName: "ellipsis.circle")
     
         }
     }

@@ -9,10 +9,9 @@ import UIKit
 
 
 enum Tabs: Int {
-    case overview
-    case session
-    case progress
-    case settings
+    case summary
+    case moveMoney
+    case more
 }
 
 final class TabbarController: UITabBarController {
@@ -49,10 +48,10 @@ final class TabbarController: UITabBarController {
         let moreNavigation = NavBarController(rootViewController: moreVC)
         
         
-        summaryVC.tabBarItem = UITabBarItem(title: Resources.String.TabBar.overview, image: Resources.Images.TabBar.overview, tag: Tabs.overview.rawValue)
-        moveMoneyVC.tabBarItem = UITabBarItem(title: Resources.String.TabBar.session, image: Resources.Images.TabBar.session, tag:
-                                                Tabs.session.rawValue)
-        moreVC.tabBarItem = UITabBarItem(title: Resources.String.TabBar.progress, image: Resources.Images.TabBar.progress, tag: Tabs.progress.rawValue)
+        summaryVC.tabBarItem = UITabBarItem(title: Resources.String.TabBar.summary, image: Resources.Images.TabBar.summary, tag: Tabs.summary.rawValue)
+        moveMoneyVC.tabBarItem = UITabBarItem(title: Resources.String.TabBar.moveMoney, image: Resources.Images.TabBar.moveMoney, tag:
+                                                Tabs.moveMoney.rawValue)
+        moreVC.tabBarItem = UITabBarItem(title: Resources.String.TabBar.more, image: Resources.Images.TabBar.more, tag: Tabs.more.rawValue)
         
         
         

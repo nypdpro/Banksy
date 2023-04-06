@@ -21,6 +21,10 @@ class AccountSummaryCell: UITableViewCell {
         let accountType: AccountType
         let accountName: String
         let balance: Decimal
+        
+        var balanceAsAttributedString: NSAttributedString {
+            return CurrencyFormatter().makeAttributedCurrency(balance)
+        }
     }
     
     let viewModel: ViewModel? = nil
@@ -63,7 +67,7 @@ class AccountSummaryCell: UITableViewCell {
         separatorView.translatesAutoresizingMaskIntoConstraints = false
         separatorView.backgroundColor = appColor
         
-
+        
         
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.font = UIFont.preferredFont(forTextStyle: .body)
@@ -82,7 +86,7 @@ class AccountSummaryCell: UITableViewCell {
         balanceAmountLabel.translatesAutoresizingMaskIntoConstraints = false
         balanceAmountLabel.textAlignment = .right
         
-        balanceAmountLabel.attributedText = makeFormattedBalance(dollars: "450,598", cents: "63")
+       // balanceAmountLabel.attributedText = makeFormattedBalance(dollars: "450,598", cents: "63")
         
         chevronImageView.translatesAutoresizingMaskIntoConstraints = false
         let chevronImage = UIImage(systemName: "chevron.right")!.withTintColor(appColor, renderingMode: .alwaysOriginal)
@@ -130,24 +134,25 @@ class AccountSummaryCell: UITableViewCell {
     
     
     private func makeFormattedBalance(dollars: String, cents: String) -> NSMutableAttributedString {
-            let dollarSignAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.preferredFont(forTextStyle: .callout), .baselineOffset: 8]
-            let dollarAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.preferredFont(forTextStyle: .title1)]
-            let centAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.preferredFont(forTextStyle: .footnote), .baselineOffset: 8]
-            
-            let rootString = NSMutableAttributedString(string: "$", attributes: dollarSignAttributes)
-            let dollarString = NSAttributedString(string: dollars, attributes: dollarAttributes)
-            let centString = NSAttributedString(string: cents, attributes: centAttributes)
-            
-            rootString.append(dollarString)
-            rootString.append(centString)
-            
-            return rootString
-        }
+        let dollarSignAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.preferredFont(forTextStyle: .callout), .baselineOffset: 8]
+        let dollarAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.preferredFont(forTextStyle: .title1)]
+        let centAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.preferredFont(forTextStyle: .footnote), .baselineOffset: 8]
+        
+        let rootString = NSMutableAttributedString(string: "$", attributes: dollarSignAttributes)
+        let dollarString = NSAttributedString(string: dollars, attributes: dollarAttributes)
+        let centString = NSAttributedString(string: cents, attributes: centAttributes)
+        
+        rootString.append(dollarString)
+        rootString.append(centString)
+        
+        return rootString
+    }
     
     
     func configure(with vm: ViewModel) {
         typeLabel.text = vm.accountType.rawValue
         nameLabel.text = vm.accountName
+        balanceAmountLabel.attributedText = vm.balanceAsAttributedString
         switch vm.accountType {
             
         case .Banking:

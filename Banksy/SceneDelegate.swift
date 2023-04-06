@@ -61,7 +61,7 @@ extension SceneDelegate: loginViewControllerDelegate {
     func didLogin() {
         
         if LocalState.hasOnboarded {
-            setRootViewController(dummyVC)
+            setRootViewController(mainVC)
         } else {
             setRootViewController(onBVC)
         }
@@ -73,7 +73,7 @@ extension SceneDelegate: loginViewControllerDelegate {
 extension SceneDelegate: OnboardingVCDelegate {
     func didFinishOnboarding() {
         LocalState.hasOnboarded = true
-        setRootViewController(dummyVC)
+        setRootViewController(mainVC)
     }
 }
 
