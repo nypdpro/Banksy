@@ -21,6 +21,7 @@ class LoginVC: UIViewController {
     weak var delegate: loginViewControllerDelegate?
     
     let mainLabel = UILabel()
+    let subLabel = UILabel()
     let loginView = LoginView()
     let signInButton = UIButton(type: .system)
     let errorMessageLabel = UILabel()
@@ -34,6 +35,12 @@ class LoginVC: UIViewController {
         return loginView.passTextField.text
     }
     
+    var trailingOffScreen: CGFloat = 1000
+    var leadingOffScreen: CGFloat = -1000
+    var leadingOnScreen: CGFloat = 16
+    
+    var titleLeadingAnchor: NSLayoutConstraint?
+    var subTitleTrainlingAnchor: NSLayoutConstraint?
     
     
     override func viewDidLoad() {
@@ -41,6 +48,11 @@ class LoginVC: UIViewController {
         
         style()
         layout()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animate()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -64,6 +76,15 @@ extension LoginVC {
         mainLabel.numberOfLines = 0
         mainLabel.text = "Welcome to Banksy"
         mainLabel.font = mainLabel.font.withSize(29)
+        mainLabel.alpha = 0
+        
+        subLabel.translatesAutoresizingMaskIntoConstraints = false
+        subLabel.textAlignment = .center
+        subLabel.textColor = .systemGray
+        subLabel.numberOfLines = 0
+        subLabel.text = "One step ahead"
+        subLabel.font = mainLabel.font.withSize(25)
+        subLabel.alpha = 0
         
         
         signInButton.translatesAutoresizingMaskIntoConstraints = false
@@ -87,6 +108,7 @@ extension LoginVC {
         view.addSubview(signInButton)
         view.addSubview(errorMessageLabel)
         view.addSubview(mainLabel)
+        view.addSubview(subLabel)
         
         NSLayoutConstraint.activate([
             
@@ -96,6 +118,13 @@ extension LoginVC {
             mainLabel.bottomAnchor.constraint(equalTo: loginView.topAnchor, constant: -160),
             mainLabel.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
             mainLabel.trailingAnchor.constraint(equalTo: loginView.trailingAnchor),
+            
+            //sublabel
+            
+            subLabel.bottomAnchor.constraint(equalTo: loginView.topAnchor, constant: -120),
+            subLabel.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
+            subLabel.trailingAnchor.constraint(equalTo: loginView.trailingAnchor),
+            
             
             
             // loginView constrains
@@ -115,6 +144,11 @@ extension LoginVC {
             errorMessageLabel.trailingAnchor.constraint(equalTo: signInButton.trailingAnchor)
         ])
         
+        titleLeadingAnchor = mainLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingOffScreen)
+        titleLeadingAnchor?.isActive = true
+        
+        subTitleTrainlingAnchor = subLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: trailingOffScreen)
+        subTitleTrainlingAnchor?.isActive = true
         
     }
     
@@ -146,6 +180,31 @@ extension LoginVC {
     private func configureView(withMessage message: String) {
         errorMessageLabel.isHidden = false
         errorMessageLabel.text = message
-        
     }
+    
+    private func animate() {
+        
+        let duration = 1.0
+        let animator1 = UIViewPropertyAnimator(duration: duration, curve: .easeInOut) {
+            self.titleLeadingAnchor?.constant = self.leadingOnScreen
+            self.view.layoutIfNeeded()
+        }
+        animator1.startAnimation()
+        
+        let animator2 = UIViewPropertyAnimator(duration: duration, curve: .easeInOut) {
+            self.subTitleTrainlingAnchor?.constant = self.leadingOnScreen
+            self.view.layoutIfNeeded()
+        }
+        
+        animator2.startAnimation(afterDelay: 1)
+        
+        let animator3 = UIViewPropertyAnimator(duration: duration * 3, curve: .easeInOut) {
+            self.mainLabel.alpha = 1
+            self.subLabel.alpha = 1 
+            self.view.layoutIfNeeded()
+        }
+        animator3.startAnimation()
+    }
+        
+   
 }

@@ -28,33 +28,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         dummyVC.delegate = self
         dummyVC.logoutDelegate = self
         
+        registerForNotification()
  
         window?.rootViewController = mainVC
         window?.makeKeyAndVisible()
         
     }
 
-    func sceneDidDisconnect(_ scene: UIScene) {
-      
-    }
 
-    func sceneDidBecomeActive(_ scene: UIScene) {
+}
+
+extension SceneDelegate {
+    func registerForNotification() {
         
+        NotificationCenter.default.addObserver(self, selector: #selector(didLogout), name: .logout, object: nil)
     }
-
-    func sceneWillResignActive(_ scene: UIScene) {
-        
-    }
-
-    func sceneWillEnterForeground(_ scene: UIScene) {
-        
-    }
-
-    func sceneDidEnterBackground(_ scene: UIScene) {
-        
-    }
-
-
+    
+    
 }
 
 extension SceneDelegate: loginViewControllerDelegate {
@@ -78,7 +68,7 @@ extension SceneDelegate: OnboardingVCDelegate {
 }
 
 extension SceneDelegate: logoutViewControllerDelegate {
-    func didLogout() {
+    @objc func didLogout() {
         setRootViewController(loginVC)
     }
 }

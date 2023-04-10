@@ -49,6 +49,7 @@ extension LoginView {
         passTextField.placeholder = "Password"
         passTextField.isSecureTextEntry = true
         passTextField.delegate = self
+        passTextField.enablePasswordToggle()
         
         dividerView.translatesAutoresizingMaskIntoConstraints = false
         dividerView.backgroundColor = .systemBackground
@@ -89,3 +90,4 @@ extension LoginView {
     func textFieldDidEndEditing(_ textField: UITextField) {
     }
 }
+

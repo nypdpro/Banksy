@@ -19,6 +19,8 @@
 		32633E1729D4B7BA007359AE /* OnboardingContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32633E1629D4B7BA007359AE /* OnboardingContainerVC.swift */; };
 		32633E1929D4BF22007359AE /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32633E1829D4BF22007359AE /* OnboardingViewController.swift */; };
 		32934FEC29DF703800E7E161 /* BanksyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32934FEB29DF703800E7E161 /* BanksyTests.swift */; };
+		32934FF329E31D1100E7E161 /* NSNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32934FF229E31D1100E7E161 /* NSNotificationName.swift */; };
+		32934FF529E3227400E7E161 /* UITextField+SecureToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32934FF429E3227400E7E161 /* UITextField+SecureToggle.swift */; };
 		32E0492529DAF32F00B01F5B /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E0492429DAF32F00B01F5B /* TabbarController.swift */; };
 		32E0492729DAF35100B01F5B /* NavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E0492629DAF35100B01F5B /* NavBarController.swift */; };
 		32E0492B29DAF39500B01F5B /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E0492A29DAF39500B01F5B /* Resources.swift */; };
@@ -61,6 +63,8 @@
 		32633E1829D4BF22007359AE /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		32934FE929DF703800E7E161 /* BanksyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BanksyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32934FEB29DF703800E7E161 /* BanksyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksyTests.swift; sourceTree = "<group>"; };
+		32934FF229E31D1100E7E161 /* NSNotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationName.swift; sourceTree = "<group>"; };
+		32934FF429E3227400E7E161 /* UITextField+SecureToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SecureToggle.swift"; sourceTree = "<group>"; };
 		32E0492429DAF32F00B01F5B /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		32E0492629DAF35100B01F5B /* NavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarController.swift; sourceTree = "<group>"; };
 		32E0492A29DAF39500B01F5B /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
@@ -214,6 +218,8 @@
 				36E0848729D6F92C0090AD02 /* LocalState.swift */,
 				3254892A29D8CDBE0050A99C /* UIViewController+Utils.swift */,
 				36727BCB29DF2B90004275E1 /* CurrencyFormatter.swift */,
+				32934FF229E31D1100E7E161 /* NSNotificationName.swift */,
+				32934FF429E3227400E7E161 /* UITextField+SecureToggle.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -334,11 +340,13 @@
 				32E0492729DAF35100B01F5B /* NavBarController.swift in Sources */,
 				32E0492B29DAF39500B01F5B /* Resources.swift in Sources */,
 				32E0492529DAF32F00B01F5B /* TabbarController.swift in Sources */,
+				32934FF529E3227400E7E161 /* UITextField+SecureToggle.swift in Sources */,
 				32633E0029D3762B007359AE /* SceneDelegate.swift in Sources */,
 				36E0848829D6F92C0090AD02 /* LocalState.swift in Sources */,
 				3254892D29D8D09D0050A99C /* MainViewController.swift in Sources */,
 				36727BC629DC4F43004275E1 /* AccountSummaryCell.swift in Sources */,
 				36727BCC29DF2B90004275E1 /* CurrencyFormatter.swift in Sources */,
+				32934FF329E31D1100E7E161 /* NSNotificationName.swift in Sources */,
 				32FE62B829DB3A1D00F26BE9 /* SummaryHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
