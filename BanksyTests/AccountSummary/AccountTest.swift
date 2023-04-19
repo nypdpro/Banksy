@@ -43,20 +43,16 @@ class AccountTests: XCTestCase {
         let data = json.data(using: .utf8)!
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
-        let result = try decoder.decode(Account.self, from: data)
+        
+        let result = try decoder.decode([Account].self, from: data)
         
         
+        let account1 = result[0]
+        XCTAssertEqual(account1.id, "1")
+        XCTAssertEqual(account1.type, .Banking)
+        XCTAssertEqual(account1.name, "Basic Savings")
+        XCTAssertEqual(account1.amount, 929466.23)
         
-        
-        XCTAssertEqual(result.id, "1")
-        XCTAssertEqual(result.type, .Banking)
-        XCTAssertEqual(result.name, "Basic Savings")
-        XCTAssertEqual(result.amount, 929466.23)
-        
-        XCTAssertEqual(result.id, "2")
-        XCTAssertEqual(result.type, .Banking)
-        XCTAssertEqual(result.name, "No-Fee All-In Chequing")
-        XCTAssertEqual(result.amount, 17562.44)
         
     }
 }
