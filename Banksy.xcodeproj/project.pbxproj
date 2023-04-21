@@ -31,6 +31,8 @@
 		32FE62B829DB3A1D00F26BE9 /* SummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FE62B729DB3A1D00F26BE9 /* SummaryHeaderView.swift */; };
 		32FE62BA29DB3A4B00F26BE9 /* SummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32FE62B929DB3A4B00F26BE9 /* SummaryHeaderView.xib */; };
 		365DC48B29E85E8600E9C701 /* SetanchorPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365DC48A29E85E8600E9C701 /* SetanchorPoint.swift */; };
+		3664DD4929F297D000EBE123 /* SkeletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3664DD4829F297D000EBE123 /* SkeletonLoadable.swift */; };
+		3664DD4B29F2985B00EBE123 /* SkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3664DD4A29F2985B00EBE123 /* SkeletonCell.swift */; };
 		36727BC629DC4F43004275E1 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36727BC529DC4F43004275E1 /* AccountSummaryCell.swift */; };
 		36727BCA29DF2B2A004275E1 /* DecimalUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36727BC929DF2B2A004275E1 /* DecimalUtil.swift */; };
 		36727BCC29DF2B90004275E1 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36727BCB29DF2B90004275E1 /* CurrencyFormatter.swift */; };
@@ -81,6 +83,8 @@
 		32FE62B729DB3A1D00F26BE9 /* SummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryHeaderView.swift; sourceTree = "<group>"; };
 		32FE62B929DB3A4B00F26BE9 /* SummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummaryHeaderView.xib; sourceTree = "<group>"; };
 		365DC48A29E85E8600E9C701 /* SetanchorPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetanchorPoint.swift; sourceTree = "<group>"; };
+		3664DD4829F297D000EBE123 /* SkeletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadable.swift; sourceTree = "<group>"; };
+		3664DD4A29F2985B00EBE123 /* SkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCell.swift; sourceTree = "<group>"; };
 		36727BC529DC4F43004275E1 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		36727BC929DF2B2A004275E1 /* DecimalUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalUtil.swift; sourceTree = "<group>"; };
 		36727BCB29DF2B90004275E1 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
@@ -219,6 +223,8 @@
 			isa = PBXGroup;
 			children = (
 				36727BC529DC4F43004275E1 /* AccountSummaryCell.swift */,
+				3664DD4829F297D000EBE123 /* SkeletonLoadable.swift */,
+				3664DD4A29F2985B00EBE123 /* SkeletonCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -381,12 +387,14 @@
 				32E0493429DAF43300B01F5B /* MoreViewController.swift in Sources */,
 				32633DFE29D3762B007359AE /* AppDelegate.swift in Sources */,
 				32633E1429D37B68007359AE /* LoginView.swift in Sources */,
+				3664DD4929F297D000EBE123 /* SkeletonLoadable.swift in Sources */,
 				32E0492729DAF35100B01F5B /* NavBarController.swift in Sources */,
 				32E0492B29DAF39500B01F5B /* Resources.swift in Sources */,
 				367AA49129E853D9009F6FF5 /* ShakeyBellView.swift in Sources */,
 				32E0492529DAF32F00B01F5B /* TabbarController.swift in Sources */,
 				32934FF529E3227400E7E161 /* UITextField+SecureToggle.swift in Sources */,
 				32633E0029D3762B007359AE /* SceneDelegate.swift in Sources */,
+				3664DD4B29F2985B00EBE123 /* SkeletonCell.swift in Sources */,
 				36F5F8D029EDA0620057CC70 /* Date+Utils.swift in Sources */,
 				36E0848829D6F92C0090AD02 /* LocalState.swift in Sources */,
 				3254892D29D8D09D0050A99C /* MainViewController.swift in Sources */,
