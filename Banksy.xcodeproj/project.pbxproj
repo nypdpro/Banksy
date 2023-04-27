@@ -33,6 +33,8 @@
 		365DC48B29E85E8600E9C701 /* SetanchorPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365DC48A29E85E8600E9C701 /* SetanchorPoint.swift */; };
 		3664DD4929F297D000EBE123 /* SkeletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3664DD4829F297D000EBE123 /* SkeletonLoadable.swift */; };
 		3664DD4B29F2985B00EBE123 /* SkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3664DD4A29F2985B00EBE123 /* SkeletonCell.swift */; };
+		3664DD4E29F964E800EBE123 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3664DD4D29F964E800EBE123 /* ProfileManager.swift */; };
+		3664DD5029F9691600EBE123 /* AccountSummaryVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3664DD4F29F9691600EBE123 /* AccountSummaryVCTest.swift */; };
 		36727BC629DC4F43004275E1 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36727BC529DC4F43004275E1 /* AccountSummaryCell.swift */; };
 		36727BCA29DF2B2A004275E1 /* DecimalUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36727BC929DF2B2A004275E1 /* DecimalUtil.swift */; };
 		36727BCC29DF2B90004275E1 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36727BCB29DF2B90004275E1 /* CurrencyFormatter.swift */; };
@@ -85,6 +87,8 @@
 		365DC48A29E85E8600E9C701 /* SetanchorPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetanchorPoint.swift; sourceTree = "<group>"; };
 		3664DD4829F297D000EBE123 /* SkeletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadable.swift; sourceTree = "<group>"; };
 		3664DD4A29F2985B00EBE123 /* SkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCell.swift; sourceTree = "<group>"; };
+		3664DD4D29F964E800EBE123 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		3664DD4F29F9691600EBE123 /* AccountSummaryVCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryVCTest.swift; sourceTree = "<group>"; };
 		36727BC529DC4F43004275E1 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		36727BC929DF2B2A004275E1 /* DecimalUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalUtil.swift; sourceTree = "<group>"; };
 		36727BCB29DF2B90004275E1 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
@@ -204,10 +208,19 @@
 			children = (
 				32E0492F29DAF40400B01F5B /* AccountSummaryViewController.swift */,
 				36F5F8D129EDA1F10057CC70 /* Networking.swift */,
+				3664DD4C29F964C700EBE123 /* Networking */,
 				36727BC729DC504C004275E1 /* Header */,
 				36727BC829DC507B004275E1 /* Cells */,
 			);
 			path = AccountSummaryViewController;
+			sourceTree = "<group>";
+		};
+		3664DD4C29F964C700EBE123 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3664DD4D29F964E800EBE123 /* ProfileManager.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		36727BC729DC504C004275E1 /* Header */ = {
@@ -268,6 +281,7 @@
 			children = (
 				36F5F8D529F03B300057CC70 /* ProfileTests.swift */,
 				36F5F8D729F03BA80057CC70 /* AccountTest.swift */,
+				3664DD4F29F9691600EBE123 /* AccountSummaryVCTest.swift */,
 			);
 			path = AccountSummary;
 			sourceTree = "<group>";
@@ -374,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				365DC48B29E85E8600E9C701 /* SetanchorPoint.swift in Sources */,
+				3664DD4E29F964E800EBE123 /* ProfileManager.swift in Sources */,
 				32633E1729D4B7BA007359AE /* OnboardingContainerVC.swift in Sources */,
 				36727BCA29DF2B2A004275E1 /* DecimalUtil.swift in Sources */,
 				36F5F8D229EDA1F10057CC70 /* Networking.swift in Sources */,
@@ -411,6 +426,7 @@
 			files = (
 				36F5F8D629F03B300057CC70 /* ProfileTests.swift in Sources */,
 				36F5F8D829F03BA80057CC70 /* AccountTest.swift in Sources */,
+				3664DD5029F9691600EBE123 /* AccountSummaryVCTest.swift in Sources */,
 				32934FEC29DF703800E7E161 /* BanksyTests.swift in Sources */,
 				367AA48E29E05FC9009F6FF5 /* CurrencyFormatterTests.swift in Sources */,
 			);
