@@ -232,10 +232,7 @@ extension AccountSummaryViewController {
         }
     }
     
-    private func displayError(_ error: NetworkError) {
-        let titleMessage = titleAndMessage(for: error)
-        self.showErrorAlert(title: titleMessage.0, message: titleMessage.1)
-    }
+    
     
     
     private func titleAndMessage(for error: NetworkError) -> (String, String) {
@@ -263,6 +260,11 @@ extension AccountSummaryViewController {
     }
     
     
+    
+    private func displayError(_ error: NetworkError) {
+        let titleMessage = titleAndMessage(for: error)
+        self.showErrorAlert(title: titleMessage.0, message: titleMessage.1)
+    }
     
     private func showErrorAlert(title: String, message: String) {        
         errorAlert.title = title

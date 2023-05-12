@@ -42,7 +42,6 @@ class AccountSummaryViewControllerTests: XCTestCase {
         XCTAssertEqual("Server Error", titleAndMessageServerError.0)
         XCTAssertEqual("Ensure you are connected to the internet. Please try again.", titleAndMessageServerError.1)
       
-        
     }
     
     func testTitleAndMessageForDecodingError() throws {
@@ -52,5 +51,4 @@ class AccountSummaryViewControllerTests: XCTestCase {
         XCTAssertEqual("We could not process your request. Please try again.", titleAndMessageDecodingError.1)
         
     }
-    
 }

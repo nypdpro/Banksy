@@ -10,12 +10,6 @@ import UIKit
 
 
 
-
-    
-   
-
-
-
 struct Account: Codable {
     let id: String
     let type: AccountType
