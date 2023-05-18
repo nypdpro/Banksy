@@ -259,6 +259,10 @@ extension AccountSummaryViewController {
         return titleAndMessage(for: error)
     }
     
+    func forceFetchProfile() {
+        fetchProfile(group: DispatchGroup(), userId: "1")
+    }
+    
     
     
     private func displayError(_ error: NetworkError) {

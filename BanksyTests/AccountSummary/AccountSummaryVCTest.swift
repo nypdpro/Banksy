@@ -33,6 +33,8 @@ class AccountSummaryViewControllerTests: XCTestCase {
     override func setUp() {
         super.setUp()
         vc = AccountSummaryViewController()
+        mockManager = MockProfileManager()
+        vc.profileManager = mockManager
         // vc.loadViewIfNeeded()
     }
     
@@ -50,5 +52,19 @@ class AccountSummaryViewControllerTests: XCTestCase {
         XCTAssertEqual("Decoding Error", titleAndMessageDecodingError.0)
         XCTAssertEqual("We could not process your request. Please try again.", titleAndMessageDecodingError.1)
         
+    }
+    
+    func testAlertForServerError() throws {
+        mockManager.error = NetworkError.serverError
+        vc.forceFetchProfile()
+        XCTAssertEqual("Server Error", vc.errorAlert.title)
+        XCTAssertEqual("Ensure you are connected to the internet. Please try again.", vc.errorAlert.message)
+    }
+    
+    func testAlertForDecodingError() throws {
+        mockManager.error = NetworkError.decodingError
+        vc.forceFetchProfile()
+        XCTAssertEqual("Decoding Error", vc.errorAlert.title)
+        XCTAssertEqual("We could not process your request. Please try again.", vc.errorAlert.message)
     }
 }
